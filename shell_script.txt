@@ -1,0 +1,222 @@
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+Last login: Wed Sep  5 04:40:34 2018 from 159.127.8.6
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+No packages needed for security; 1 packages available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-172-31-23-52 ~]$ whoami
+ec2-user
+[ec2-user@ip-172-31-23-52 ~]$ uname
+Linux
+[ec2-user@ip-172-31-23-52 ~]$ uname -a
+Linux ip-172-31-23-52.ap-south-1.compute.internal 4.14.62-70.117.amzn2.x86_64 #1 SMP Fri Aug 10 20:14:53 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+[ec2-user@ip-172-31-23-52 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-23-52 ~]$ sudo su
+[root@ip-172-31-23-52 ec2-user]# mkdir shelllabs
+[root@ip-172-31-23-52 ec2-user]# ls
+shelllabs
+[root@ip-172-31-23-52 ec2-user]# yum install git -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                                                                                                                            | 2.4 kB  00:00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package git.x86_64 0:2.14.4-1.amzn2 will be installed
+--> Processing Dependency: perl-Git = 2.14.4-1.amzn2 for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: git-core-doc = 2.14.4-1.amzn2 for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: git-core = 2.14.4-1.amzn2 for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: emacs-filesystem >= 24.3 for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: perl(Term::ReadKey) for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: perl(Git::I18N) for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: perl(Git) for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: perl(Error) for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: libsecret-1.so.0()(64bit) for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: libpcre2-8.so.0()(64bit) for package: git-2.14.4-1.amzn2.x86_64
+--> Running transaction check
+---> Package emacs-filesystem.noarch 1:24.3-20.amzn2.0.1 will be installed
+---> Package git-core.x86_64 0:2.14.4-1.amzn2 will be installed
+---> Package git-core-doc.x86_64 0:2.14.4-1.amzn2 will be installed
+---> Package libsecret.x86_64 0:0.18.5-2.amzn2 will be installed
+---> Package pcre2.x86_64 0:10.23-2.amzn2 will be installed
+---> Package perl-Error.noarch 1:0.17020-2.amzn2 will be installed
+---> Package perl-Git.noarch 0:2.14.4-1.amzn2 will be installed
+---> Package perl-TermReadKey.x86_64 0:2.30-20.amzn2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                         Arch                                  Version                                               Repository                                 Size
+=============================================================================================================================================================================================
+Installing:
+ git                                             x86_64                                2.14.4-1.amzn2                                        amzn2-core                                1.1 M
+Installing for dependencies:
+ emacs-filesystem                                noarch                                1:24.3-20.amzn2.0.1                                   amzn2-core                                 58 k
+ git-core                                        x86_64                                2.14.4-1.amzn2                                        amzn2-core                                4.1 M
+ git-core-doc                                    x86_64                                2.14.4-1.amzn2                                        amzn2-core                                2.3 M
+ libsecret                                       x86_64                                0.18.5-2.amzn2                                        amzn2-core                                152 k
+ pcre2                                           x86_64                                10.23-2.amzn2                                         amzn2-core                                209 k
+ perl-Error                                      noarch                                1:0.17020-2.amzn2                                     amzn2-core                                 32 k
+ perl-Git                                        noarch                                2.14.4-1.amzn2                                        amzn2-core                                 67 k
+ perl-TermReadKey                                x86_64                                2.30-20.amzn2                                         amzn2-core                                 31 k
+
+Transaction Summary
+=============================================================================================================================================================================================
+Install  1 Package (+8 Dependent packages)
+
+Total download size: 7.9 M
+Installed size: 36 M
+Downloading packages:
+(1/9): emacs-filesystem-24.3-20.amzn2.0.1.noarch.rpm                                                                                                                  |  58 kB  00:00:00
+(2/9): git-2.14.4-1.amzn2.x86_64.rpm                                                                                                                                  | 1.1 MB  00:00:00
+(3/9): git-core-doc-2.14.4-1.amzn2.x86_64.rpm                                                                                                                         | 2.3 MB  00:00:00
+(4/9): libsecret-0.18.5-2.amzn2.x86_64.rpm                                                                                                                            | 152 kB  00:00:00
+(5/9): git-core-2.14.4-1.amzn2.x86_64.rpm                                                                                                                             | 4.1 MB  00:00:00
+(6/9): pcre2-10.23-2.amzn2.x86_64.rpm                                                                                                                                 | 209 kB  00:00:00
+(7/9): perl-Error-0.17020-2.amzn2.noarch.rpm                                                                                                                          |  32 kB  00:00:00
+(8/9): perl-Git-2.14.4-1.amzn2.noarch.rpm                                                                                                                             |  67 kB  00:00:00
+(9/9): perl-TermReadKey-2.30-20.amzn2.x86_64.rpm                                                                                                                      |  31 kB  00:00:00
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                         27 MB/s | 7.9 MB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : pcre2-10.23-2.amzn2.x86_64                                                                                                                                                1/9
+  Installing : git-core-2.14.4-1.amzn2.x86_64                                                                                                                                            2/9
+  Installing : 1:perl-Error-0.17020-2.amzn2.noarch                                                                                                                                       3/9
+  Installing : git-core-doc-2.14.4-1.amzn2.x86_64                                                                                                                                        4/9
+  Installing : perl-TermReadKey-2.30-20.amzn2.x86_64                                                                                                                                     5/9
+  Installing : 1:emacs-filesystem-24.3-20.amzn2.0.1.noarch                                                                                                                               6/9
+  Installing : libsecret-0.18.5-2.amzn2.x86_64                                                                                                                                           7/9
+  Installing : perl-Git-2.14.4-1.amzn2.noarch                                                                                                                                            8/9
+  Installing : git-2.14.4-1.amzn2.x86_64                                                                                                                                                 9/9
+  Verifying  : libsecret-0.18.5-2.amzn2.x86_64                                                                                                                                           1/9
+  Verifying  : 1:perl-Error-0.17020-2.amzn2.noarch                                                                                                                                       2/9
+  Verifying  : git-core-doc-2.14.4-1.amzn2.x86_64                                                                                                                                        3/9
+  Verifying  : pcre2-10.23-2.amzn2.x86_64                                                                                                                                                4/9
+  Verifying  : perl-Git-2.14.4-1.amzn2.noarch                                                                                                                                            5/9
+  Verifying  : git-2.14.4-1.amzn2.x86_64                                                                                                                                                 6/9
+  Verifying  : git-core-2.14.4-1.amzn2.x86_64                                                                                                                                            7/9
+  Verifying  : 1:emacs-filesystem-24.3-20.amzn2.0.1.noarch                                                                                                                               8/9
+  Verifying  : perl-TermReadKey-2.30-20.amzn2.x86_64                                                                                                                                     9/9
+
+Installed:
+  git.x86_64 0:2.14.4-1.amzn2
+
+Dependency Installed:
+  emacs-filesystem.noarch 1:24.3-20.amzn2.0.1  git-core.x86_64 0:2.14.4-1.amzn2  git-core-doc.x86_64 0:2.14.4-1.amzn2     libsecret.x86_64 0:0.18.5-2.amzn2  pcre2.x86_64 0:10.23-2.amzn2
+  perl-Error.noarch 1:0.17020-2.amzn2          perl-Git.noarch 0:2.14.4-1.amzn2  perl-TermReadKey.x86_64 0:2.30-20.amzn2
+
+Complete!
+[root@ip-172-31-23-52 ec2-user]# git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+[root@ip-172-31-23-52 ec2-user]# yum update -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+Resolving Dependencies
+--> Running transaction check
+---> Package yum.noarch 0:3.4.3-154.amzn2.0.1 will be updated
+---> Package yum.noarch 0:3.4.3-158.amzn2.0.2 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================================
+ Package                                Arch                                      Version                                                Repository                                     Size
+=============================================================================================================================================================================================
+Updating:
+ yum                                    noarch                                    3.4.3-158.amzn2.0.2                                    amzn2-core                                    1.2 M
+
+Transaction Summary
+=============================================================================================================================================================================================
+Upgrade  1 Package
+
+Total download size: 1.2 M
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+yum-3.4.3-158.amzn2.0.2.noarch.rpm                                                                                                                                    | 1.2 MB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : yum-3.4.3-158.amzn2.0.2.noarch                                                                                                                                            1/2
+  Cleanup    : yum-3.4.3-154.amzn2.0.1.noarch                                                                                                                                            2/2
+  Verifying  : yum-3.4.3-158.amzn2.0.2.noarch                                                                                                                                            1/2
+  Verifying  : yum-3.4.3-154.amzn2.0.1.noarch                                                                                                                                            2/2
+
+Updated:
+  yum.noarch 0:3.4.3-158.amzn2.0.2
+
+Complete!
+[root@ip-172-31-23-52 ec2-user]# cd shelllabs/
+[root@ip-172-31-23-52 shelllabs]# git clone https://github.com/ashishrpandey/bashshellscripts.git
+Cloning into 'bashshellscripts'...
+remote: Counting objects: 22, done.
+remote: Compressing objects: 100% (19/19), done.
+remote: Total 22 (delta 5), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (22/22), done.
+[root@ip-172-31-23-52 shelllabs]# ls -lrt
+total 0
+drwxr-xr-x 3 root root 250 Sep  5 05:58 bashshellscripts
+[root@ip-172-31-23-52 shelllabs]# cd bashshellscripts/
+[root@ip-172-31-23-52 bashshellscripts]# l s-lrt
+bash: l: command not found
+[root@ip-172-31-23-52 bashshellscripts]# ls -lrt
+total 312
+-rw-r--r-- 1 root root  62661 Sep  5 05:58 vi_cheat_sheet.pdf
+-rw-r--r-- 1 root root     39 Sep  5 05:58 README.md
+-rw-r--r-- 1 root root  52116 Sep  5 05:58 Linux_command_cheat-sheet.pdf
+-rw-r--r-- 1 root root 168648 Sep  5 05:58 linux_cheat_sheet.pdf
+-rw-r--r-- 1 root root    244 Sep  5 05:58 ifsimple.sh
+-rw-r--r-- 1 root root    219 Sep  5 05:58 ifexample.sh
+-rw-r--r-- 1 root root     36 Sep  5 05:58 helloworld.sh
+-rw-r--r-- 1 root root    331 Sep  5 05:58 env.sh
+-rw-r--r-- 1 root root    430 Sep  5 05:58 comments.sh
+-rw-r--r-- 1 root root    369 Sep  5 05:58 commandSubstitution.sh
+[root@ip-172-31-23-52 bashshellscripts]#
