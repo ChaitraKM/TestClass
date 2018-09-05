@@ -281,3 +281,20 @@ total 24
 -rw-r--r-- 1 root root 17433 Sep  5 06:19 shell_script.txt
 -rw-r--r-- 1 root root    11 Sep  5 06:19 README.md
 [root@ip-172-31-23-52 TestClass]#
+[root@ip-172-31-23-52 TestClass]# git pull origin master
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/ChaitraKM/TestClass
+ * branch            master     -> FETCH_HEAD
+   a2ba8a9..9745efc  master     -> origin/master
+Updating a2ba8a9..9745efc
+Fast-forward
+ shell_script.txt | 63 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 62 insertions(+), 1 deletion(-)
+[root@ip-172-31-23-52 TestClass]# ls -lrt
+total 24
+-rw-r--r-- 1 root root    11 Sep  5 06:19 README.md
+-rw-r--r-- 1 root root 20051 Sep  5 06:21 shell_script.txt
+[root@ip-172-31-23-52 TestClass]#
